@@ -8,8 +8,6 @@ public class MatrixToArray {
 
 	static int m, n;
 	static Random rand = new Random();
-	static int a;
-	static int b;
 	static int lastA = 0;
 	static Scanner sc;
 
@@ -37,11 +35,11 @@ public class MatrixToArray {
 
 	private static void printArray(int[][] arr, int direction) {
 		for (int i = 0; i < m * n; i++) {
-			a = i / n;
+			int a = i / n;
 			int diff = Math.abs(lastA - a);
 			direction = Math.abs(direction - diff);
 			int var = (n - 1) * direction;
-			b = Math.abs(var - i % n);
+			int b = Math.abs(var - i % n);
 			System.out.println(arr[a][b]);
 			lastA = a;
 		}
